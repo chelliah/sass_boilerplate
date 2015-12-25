@@ -1,5 +1,5 @@
 body{
-    background-color: #f1ebd4;
+    background-color: #eae2e7;
     font-family: "Raleway", sans-serif;
 }
 .container {
@@ -56,7 +56,7 @@ p{
 .download:hover{
     cursor:pointer;
     background-color: #000000;
-    color: #f1ebd4;
+    color: #eae2e7;
 }
 
 
