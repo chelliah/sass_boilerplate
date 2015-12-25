@@ -6,7 +6,7 @@ $(document).ready(function(){
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     var renderer = new THREE.WebGLRenderer({alpha: true});
-    var cubeArray = [];
+    var sphereArray = [];
     var light = new THREE.HemisphereLight( 0xffffff, 0xaaaaaa, 1 );
 
     $(document).on('click', function(event){
@@ -19,7 +19,7 @@ $(document).ready(function(){
             for (var i = 0; i<countX; i++){
                 for(var m=0; m<countY; m++){
                     var index = i*countX + m;
-                    var sphere = cubeArray[index];
+                    var sphere = sphereArray[index];
                     sphere.position.y = ( Math.sin( ( i + step ) * 0.4 ) * 10 ) +
                         ( Math.sin( ( m + step ) * 0.5 ) * 10 );
                     sphere.scale.x = sphere.scale.y = sphere.scale.z =
@@ -46,12 +46,12 @@ $(document).ready(function(){
         var material = new THREE.MeshLambertMaterial({color: 0x111111});
         for (var i = 0; i<countX; i++){
             for(var m=0; m<countY; m++){
-                var cube = new THREE.Mesh( geometry, material );
-                cube.position.x = i*50;
-                cube.position.y = 100;
-                cube.position.z = m*50;
-                scene.add(cube);
-                cubeArray.push(cube);
+                var sphere = new THREE.Mesh( geometry, material );
+                sphere.position.x = i*50;
+                sphere.position.y = 100;
+                sphere.position.z = m*50;
+                scene.add(sphere);
+                sphereArray.push(sphere);
             }
         }
     };
@@ -62,14 +62,14 @@ $(document).ready(function(){
         for (var i = 0; i<countX; i++){
             for(var m=0; m<countY; m++){
                 var index = i*countX + m;
-                cubeArray[index].position.y = ( Math.sin( ( i + step ) * 0.4 ) * 10 ) +
+                sphereArray[index].position.y = ( Math.sin( ( i + step ) * 0.4 ) * 10 ) +
                     ( Math.sin( ( m + step ) * 0.5 ) * 10 );
                 // var brightness = Math.sin(i * step) * 255;
-                cubeArray[index].scale.x = cubeArray[index].scale.y = cubeArray[index].scale.z =
-                    cubeArray[index].position.y/100+0.1;
-                cubeArray[index].position.y += riser;
-                // console.log(cubeArray[index].position.y/100);
-                // cubeArray[index].material.color.setRGB(brightness,brightness,brightness);
+                sphereArray[index].scale.x = sphereArray[index].scale.y = sphereArray[index].scale.z =
+                    sphereArray[index].position.y/100+.15;
+                sphereArray[index].position.y += riser;
+                // console.log(sphereArray[index].position.y/100);
+                // sphereArray[index].material.color.setRGB(brightness,brightness,brightness);
             }
         }
         renderer.render( scene, camera );
