@@ -22,7 +22,7 @@ $(document).ready(function(){
                     var sphere = sphereArray[index];
                     sphere.position.y = ( Math.sin( ( i + step ) * 0.4 ) * 10 ) +
                         ( Math.sin( ( m + step ) * 0.5 ) * 10 );
-                    sphere.scale.x = sphere.scale.y = sphere.scale.z /= 1.015;
+                    sphere.scale.x = sphere.scale.y = sphere.scale.z /= 1.02;
                     sphere.position.y += riser * riser/5 * (1/Math.abs(clickX-sphere.position.x+1));
 
                 }
@@ -36,7 +36,7 @@ $(document).ready(function(){
         setTimeout(function(){
 
             window.location = '/assets/views/index.html';
-        },3500);
+        },2500);
     };
 
     var createArray = function(){
