@@ -97,4 +97,5 @@ $(document).ready(function(){
     render();
 
     $(document).on('click', transition);
+    $(document).on('swipe', transition);
 });
