@@ -9,8 +9,8 @@ $(document).ready(function(){
     var sphereArray = [];
     var light = new THREE.HemisphereLight( 0xffffff, 0xaaaaaa, 1 );
 
-    $(document).on('click', function(event){
-        var clickX = event.pageX + 750;
+    var transition = function(){
+        var clickX = event.pageX + 750 || 1500;
 
         render = function() {
             requestAnimationFrame( render );
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
             window.location = '/assets/views/index.html';
         },3000);
-    });
+    };
 
     var createArray = function(){
         var geometry = new THREE.SphereGeometry( 15, 8, 8 );
@@ -95,4 +95,6 @@ $(document).ready(function(){
 
     init();
     render();
+
+    $(document).on('click', transition);
 });
