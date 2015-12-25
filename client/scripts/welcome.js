@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
 
     var createArray = function(){
-        var geometry = new THREE.SphereGeometry( 15, 32, 32 );
+        var geometry = new THREE.SphereGeometry( 15, 8, 8 );
         var material = new THREE.MeshLambertMaterial({color: 0x111111});
         for (var i = 0; i<countX; i++){
             for(var m=0; m<countY; m++){
