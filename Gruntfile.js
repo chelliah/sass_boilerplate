@@ -8,9 +8,13 @@ module.exports = function(grunt){
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
-            client: {
-                src: 'client/scripts/*.js',
+            main: {
+                src: 'client/scripts/app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
+            },
+            welcome: {
+                src: 'client/scripts/welcome.js',
+                dest: 'server/public/assets/scripts/welcome.min.js'
             }
         },
         copy: {
@@ -32,6 +36,14 @@ module.exports = function(grunt){
                     "fonts/*"
                 ],
                 "dest": "server/public/vendors/font-awesome/"
+            },
+            three: {
+                expand: true,
+                cwd: 'node_modules/three/',
+                src: [
+                    "three.min.js"
+                ],
+                "dest": "server/public/vendors/"
             },
             normalize: {
                 expand: true,
