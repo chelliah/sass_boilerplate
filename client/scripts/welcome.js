@@ -4,13 +4,13 @@ $(document).ready(function(){
     var countY = 50;
     var riser = 0;
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 5000 );
+    var camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 2500 );
     var renderer = new THREE.WebGLRenderer({alpha: true});
     var sphereArray = [];
     var light = new THREE.HemisphereLight( 0xffffff, 0xaaaaaa, 1 );
 
     var transition = function(){
-        var clickX = event.pageX + 2000;
+        var clickX =  (event.pageX) + 1750;
         console.log(clickX);
         render = function() {
             requestAnimationFrame( render );
@@ -22,7 +22,7 @@ $(document).ready(function(){
                     var sphere = sphereArray[index];
                     sphere.position.y = ( Math.sin( ( i + step ) * 0.4 ) * 10 ) +
                         ( Math.sin( ( m + step ) * 0.5 ) * 10 );
-                    sphere.scale.x = sphere.scale.y = sphere.scale.z /= 1.01;
+                    sphere.scale.x = sphere.scale.y = sphere.scale.z /= 1.015;
                     sphere.position.y += riser * riser/5 * (1/Math.abs(clickX-sphere.position.x+1));
 
                 }
