@@ -27,6 +27,14 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
+            jQueryMobile: {
+                expand: true,
+                cwd: 'node_modules/jquery-touchswipe/',
+                src: [
+                    "jquery.touchSwipe.min.js"
+                ],
+                "dest": "server/public/vendors/"
+            },
             fontAwesome: {
                 expand: true,
                 cwd: 'node_modules/font-awesome/',
