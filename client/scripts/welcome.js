@@ -35,7 +35,7 @@ $(document).ready(function(){
 
         setTimeout(function(){
 
-            window.location = '/assets/views/index.html';
+            window.location = '/main';
         },2500);
     };
 
