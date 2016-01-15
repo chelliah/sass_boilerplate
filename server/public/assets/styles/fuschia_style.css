@@ -1,0 +1,94 @@
+
+body{
+    color: #423434;
+    background-color: #ecf0f1;
+    font-family: "Raleway", sans-serif;
+}
+
+header{
+    background-image: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452819730/45degreee_fabric_myh2m6.png");
+    /*background-size: cover;*/
+    background-position: center;
+    height: 350px;
+}
+
+header *{
+    margin-top: 0px;
+    color: #343738;
+}
+
+a {
+    text-decoration: none;
+    color: #423434;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.link-left{
+    left: 5%;
+    float: left;
+}
+.link-right{
+    float: right;
+    right: 5%;
+}
+.title {
+    position: relative;
+    bottom: -190px;
+    left: 50px;
+    /* margin-top: 0px; */
+    /* margin-bottom: 20px; */
+    margin-bottom: 0px;
+    font-size: 64px;
+}
+
+
+.container {
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.title-subhead {
+    position: relative;
+    bottom: -220px;
+    left: 55px;
+    font-size: 20px;
+}
+
+.section{
+    margin-bottom: 30px;
+}
+
+.section-title {
+    margin-top: 0px;
+    font-size: 36px;
+    border-bottom: 2px solid #423434;
+}
+
+.section-text{
+
+}
+
+/*sliding out*/
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: #423434;
+}
