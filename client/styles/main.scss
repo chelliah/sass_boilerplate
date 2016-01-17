@@ -1,0 +1,17 @@
+@import "_components/slideOut";
+@import "_components/download";
+@import "_components/section";
+@import "_components/header";
+@import "_components/projectLinks";
+@import "_layout/container";
+@import "_layout/hidden";
+@import "_pages/main";
+@import "_pages/welcome";
+@import "_utilities/variables";
+
+html, body{
+  background-color: $primaryColor;
+  color: $fontColor;
+  font-family: $font-stack;
+
+}

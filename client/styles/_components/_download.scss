@@ -1,0 +1,20 @@
+@import "../_utilities/variables";
+
+.download{
+  text-decoration: none;
+  //color: #423434;
+  margin-top: 45px;
+  padding: 5px;
+  border: 5px solid $fontColor;
+  background-color: rgba(0,0,0,0);
+  color: $fontColor;
+  width: 143px;
+  transition: background-color .5s, color .5s;
+
+  &:hover{
+    cursor:pointer;
+    background-color: $fontColor;
+    color: $primaryColor;
+
+  }
+}

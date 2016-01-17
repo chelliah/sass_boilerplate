@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -7,7 +7,7 @@ var concat = require('gulp-concat');
 
 //compile sass files
 gulp.task('styles', function(){
-    gulp.src('client/styles/sass/**/*.scss')
+    gulp.src('client/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('server/public/assets/styles/'));
 });
@@ -26,7 +26,7 @@ gulp.task('copy', function(){
         .pipe(gulp.dest('server/public/vendors/'));
     gulp.src(['node_modules/normalize.css/normalize.css'])
         .pipe(gulp.dest('server/public/vendors/'));
-    gulp.src(['client/views/**/*.html'])
+    gulp.src(['client/views/*'])
         .pipe(gulp.dest('server/public/assets/views/'));
 });
 
@@ -46,8 +46,9 @@ gulp.task('js', function(){
 });
 
 //watch task
-//gulp.task('default', function(){
-//    gulp.watch('sass/**/*.scss', ['styles']);
-//});
+gulp.task('watch', function(){
+    gulp.watch('client/styles/**/*.scss', ['styles']);
+    gulp.watch('client/scripts/*.js', ['js'])
+});
 
 gulp.task('default', ['styles', 'js', 'copy']);

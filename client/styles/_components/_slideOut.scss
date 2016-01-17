@@ -1,0 +1,28 @@
+@import "../_utilities/variables";
+
+.sliding-middle-out {
+  text-decoration: none;
+  color: $fontColor;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  padding-top: 3px;
+
+  &:after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    cursor: pointer;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+
+  &:hover:after{
+    width: 100%;
+    background: $fontColor;
+
+  }
+}
+

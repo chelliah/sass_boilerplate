@@ -1,0 +1,46 @@
+@import "../_utilities/variables";
+
+.title{
+  margin-bottom: 20px;
+  font-size: 44px;
+}
+
+.sub-head{
+  margin-bottom: 15px;
+}
+
+.project-title{
+  position: relative;
+  bottom: -190px;
+  left: 59px;
+  margin-bottom: 0px;
+  font-size: 64px;
+}
+
+.project-sub-head {
+  position: relative;
+  bottom: -210px;
+  left: 75px;
+  font-size: 20px;
+}
+
+.fuschia-header{
+  background: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452819730/45degreee_fabric_myh2m6.png") center;
+  height: 350px;
+
+  *{
+    margin-top: 0;
+    color: $fontColor;
+  }
+}
+
+
+.open-arms-header{
+  background: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452814059/open_arms_building.jpg") center;
+  height: 350px;
+
+  *{
+    margin-top: 0;
+    color: $primaryColor;
+  }
+}
