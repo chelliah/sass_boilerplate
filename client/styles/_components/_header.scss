@@ -1,4 +1,5 @@
 @import "../_utilities/variables";
+@import "../_mixins/keyframes";
 
 .title{
   margin-bottom: 20px;
@@ -13,8 +14,9 @@
   position: relative;
   bottom: -190px;
   left: 59px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 64px;
+  @include animation(0, .9s, ease-out, dropHeader);
 }
 
 .project-sub-head {
@@ -22,6 +24,18 @@
   bottom: -210px;
   left: 75px;
   font-size: 20px;
+  @include animation(0, .9s, ease-out, dropHeader);
+}
+
+@include keyframes(dropHeader){
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fuschia-header{
@@ -38,6 +52,7 @@
 .open-arms-header{
   background: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452814059/open_arms_building.jpg") center;
   height: 350px;
+  background-size: cover;
 
   *{
     margin-top: 0;

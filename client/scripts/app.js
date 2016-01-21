@@ -10,4 +10,8 @@ $(document).ready(function(){
         event.preventDefault();
         window.location.href = 'https://www.dropbox.com/s/7klk97kcokkyine/aron_resume_january_2016.pdf?dl=0';
     });
+
+    $(".sliding-middle-out").on('click', function(event){
+        event.getElementsByClassName('container').fadeOut(750).addClass('hidden');
+    })
 });

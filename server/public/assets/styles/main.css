@@ -62,14 +62,90 @@
   position: relative;
   bottom: -190px;
   left: 59px;
-  margin-bottom: 0px;
-  font-size: 64px; }
+  margin-bottom: 0;
+  font-size: 64px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.9s;
+  -webkit-animation-name: dropHeader;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.9s;
+  -moz-animation-name: dropHeader;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.9s;
+  animation-name: dropHeader;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
 
 .project-sub-head {
   position: relative;
   bottom: -210px;
   left: 75px;
-  font-size: 20px; }
+  font-size: 20px;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 0.9s;
+  -webkit-animation-name: dropHeader;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 0.9s;
+  -moz-animation-name: dropHeader;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 0;
+  animation-duration: 0.9s;
+  animation-name: dropHeader;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */ }
+
+@-webkit-keyframes dropHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-moz-keyframes dropHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-ms-keyframes dropHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@-o-keyframes dropHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes dropHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .fuschia-header {
   background: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452819730/45degreee_fabric_myh2m6.png") center;
@@ -80,7 +156,8 @@
 
 .open-arms-header {
   background: url("http://res.cloudinary.com/dhro0fkhc/image/upload/v1452814059/open_arms_building.jpg") center;
-  height: 350px; }
+  height: 350px;
+  background-size: cover; }
   .open-arms-header * {
     margin-top: 0;
     color: #ecf0f1; }
