@@ -743,7 +743,6 @@
   height: 100%;
   width: 100%;
   top: 0%;
-  padding-top: 75px;
   background-color: #423434;
   color: #ecf0f1;
   z-index: 2;
@@ -761,11 +760,12 @@
       display: block; } }
   .mobile-nav.open {
     left: 0%; }
-
-.banner-mobile-link {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 200; }
+  .mobile-nav .banners {
+    padding-top: 100px; }
+    .mobile-nav .banners .banner-mobile-link {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 200; }
 
 .project-image-container {
   width: 100%;
