@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     addHover();
 
-
+    $('.scroll-button').scrollTop(300);
     setTimeout(function(){
         $('.scroll-button').fadeOut(1000).delay(1000, function(){
             $(this).addClass('hidden');

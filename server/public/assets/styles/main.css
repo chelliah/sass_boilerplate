@@ -1193,39 +1193,38 @@
       margin: 400px 20px; }
       .about-me-container .bio-container .bio-event .bio-cluster {
         margin: 200px 20px; }
-
-.scroll-button {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-  -webkit-animation-delay: 0;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-name: bounceScroll;
-  -webkit-animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
-  -webkit-animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-delay: 0;
-  -moz-animation-duration: 1s;
-  -moz-animation-name: bounceScroll;
-  -moz-animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
-  -moz-animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  -moz-animation-iteration-count: infinite;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-name: bounceScroll;
-  animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
-  animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  animation-iteration-count: infinite;
-  text-align: center; }
-  @media (max-width: 767px) {
-    .scroll-button {
-      bottom: 55px; } }
-  .scroll-button .scroll-svg {
-    width: 100px; }
+  .about-me-container .scroll-button {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    -webkit-animation-delay: 0;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: bounceScroll;
+    -webkit-animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
+    -webkit-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-delay: 0;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: bounceScroll;
+    -moz-animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
+    -moz-animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    -moz-animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-duration: 1s;
+    animation-name: bounceScroll;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.41, 1);
+    animation-fill-mode: forwards;
+    /* this prevents the animation from restarting! */
+    animation-iteration-count: infinite;
+    text-align: center; }
+    @media (max-width: 767px) {
+      .about-me-container .scroll-button {
+        bottom: 55px; } }
+    .about-me-container .scroll-button .scroll-svg {
+      width: 100px; }
 
 @-webkit-keyframes bounceScroll {
   0% {

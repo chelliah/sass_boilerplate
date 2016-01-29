@@ -9,8 +9,8 @@
     var modifiedHeight;
 
     function setup(){
-        modifiedHeight = windowHeight-110;
-        canvas = createCanvas(windowWidth, windowHeight-110);
+        modifiedHeight = displayHeight-110;
+        canvas = createCanvas(displayWidth, displayHeight-110);
 
         //canvas = createCanvas(window.innerWidth, window.innerHeight);
         canvas.position(0,0);
@@ -36,7 +36,7 @@
 
 
     function windowResized() {
-        resizeCanvas(windowWidth, windowHeight-110);
+        resizeCanvas(displayWidth, displayHeight-110);
         initialize(Math.round(windowWidth *.8),100,25);
 
     }
@@ -48,6 +48,16 @@
         var scrollDist = event.deltaY;
         for(var i = 0; i<cubes.cubes.length; i++){
             cubes.cubes[i].position.y += scrollDist/20;
+        }
+        //cubes.draw();
+
+    }
+
+    function touchMoved() {
+        console.log('scrollin');
+        var scrollDist = touchY - ptouchY;
+        for(var i = 0; i<cubes.cubes.length; i++){
+            cubes.cubes[i].position.y += scrollDist;
         }
         //cubes.draw();
 
