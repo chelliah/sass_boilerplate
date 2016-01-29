@@ -3,15 +3,45 @@
 @import "_components/section";
 @import "_components/header";
 @import "_components/projectLinks";
+@import "_components/mobileNav";
+@import "_components/projectImages";
+@import "_components/faIcons";
+
 @import "_layout/container";
 @import "_layout/hidden";
+
 @import "_pages/main";
 @import "_pages/welcome";
+@import "_pages/contact";
+@import "_pages/aboutMe";
+
 @import "_utilities/variables";
 
 html, body{
   background-color: $primaryColor;
   color: $fontColor;
   font-family: $font-stack;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 
+
+}
+
+.wrapper{
+  position:absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+@-ms-viewport {
+  width: device-width;
+}
+
+.text-center{
+  position: relative;
+  text-align: center;
 }

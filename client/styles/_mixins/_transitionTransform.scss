@@ -1,0 +1,6 @@
+@mixin transitionTransform ($timing, $vars...){
+  -webkit-transition: -webkit-transform $timing, $vars;
+  -moz-transition: -moz-transform $timing, $vars;
+  -o-transition: -o-transform $timing, $vars;
+  transition: transform $timing, $vars;
+}

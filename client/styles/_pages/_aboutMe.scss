@@ -1,0 +1,68 @@
+//@import '../_mixins/keyframes';
+@import '../_mixins/animation';
+
+.about-me-container{
+  position:relative;
+  width: 100%;
+  height: -webkit-calc(100% - 110px);
+  height:    -moz-calc(100% - 110px);
+  height:         calc(100% - 110px);
+  //top: 110px;
+  //overflow-y: scroll;
+
+  #animation-container{
+    width: 100%;
+    //height: -webkit-calc(100% - 110px);
+    //height:    -moz-calc(100% - 110px);
+    //height:         calc(100% - 110px);
+    z-index: 5;
+
+
+
+  }
+
+  .bio-container{
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    margin-left: 25px;
+
+    .bio-event{
+      font-weight: 100;
+      font-size: 24px;
+      //margin-left: 20px;
+      margin: 400px 20px;
+
+      .bio-cluster{
+        margin: 200px 20px;
+      }
+    }
+  }
+
+}
+
+.scroll-button{
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  @include infiniteAnimation(0, 1s,  cubic-bezier(.17,.67,.41,1) , bounceScroll);
+  text-align: center;
+  .scroll-svg{
+    width: 100px;
+
+  }
+}
+
+@include keyframes(bounceScroll){
+  0%{
+    bottom: 15px;
+  },
+  50%{
+    bottom: 25px;
+  },
+  100%{
+    bottom: 15px;
+  }
+}

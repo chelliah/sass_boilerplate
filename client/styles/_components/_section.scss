@@ -1,5 +1,8 @@
+@import '../_mixins/clearfix';
 .section {
+  @extend %clearFix;
   margin-bottom: 25px;
+  position: relative;
 }
 
 .title{

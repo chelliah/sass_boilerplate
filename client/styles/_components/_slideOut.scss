@@ -24,5 +24,14 @@
     background: $fontColor;
 
   }
+
+  &.mobile{
+    color: $primaryColor;
+    &:hover:after{
+      width: 100%;
+      background: $primaryColor;
+
+    }
+  }
 }
 

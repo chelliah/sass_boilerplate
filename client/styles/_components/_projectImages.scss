@@ -1,0 +1,110 @@
+@import '../_mixins/transition';
+@import '../_mixins/responsive';
+
+
+.project-image-container{
+  width: 100%;
+  height: 200px;
+  margin: 20px 0;
+  overflow: hidden;
+  //background: black;
+  position:relative;
+
+  .overlay{
+    position: absolute;
+    background: black;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    @include transition(opacity .5s)
+  }
+  .project-image{
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    //@include transition(opacity .5s);
+
+    &.open-arms{
+      top: -25px;
+    }
+
+    &.fuschia{
+      top: -50px;
+    }
+
+    &.bitstep{
+      top: -100px;
+    }
+    @include mobile {
+      top: 0;
+      min-width: 100%;
+      min-height: 200px;
+      &.open-arms{
+        top: 0;
+      }
+
+      &.fuschia{
+        top: 0;
+      }
+
+      &.bitstep{
+        top: 0;
+      }
+      //max-height: 100%;
+    }
+
+    @include tablet{
+      top: 0;
+      min-width: 100%;
+      min-height: 200px;
+      &.open-arms{
+        top: 0;
+      }
+
+      &.fuschia{
+        top: 0;
+      }
+
+      &.bitstep{
+        top: 0;
+      }
+
+
+    }
+
+  }
+
+
+
+  .project-description{
+    *{
+      margin: 5px 0;
+    }
+
+    .project-description-description{
+      font-weight: 200;
+    }
+    left: 5%;
+    top: 200px;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    @include transition(top .5s);
+  }
+
+  &:hover{
+
+    .overlay{
+      opacity: .5;
+    }
+    //.project-image{
+    //  opacity: .6;
+    //}
+
+    .project-description{
+      top: 25px;
+    }
+  }
+}

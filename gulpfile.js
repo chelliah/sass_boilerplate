@@ -43,6 +43,12 @@ gulp.task('js', function(){
         .pipe(uglify())
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('server/public/assets/scripts/'));
+
+    //blocks animation
+    gulp.src('client/scripts/blocks.js')
+        .pipe(uglify())
+        .pipe(concat('blocks.min.js'))
+        .pipe(gulp.dest('server/public/assets/scripts/'));
 });
 
 //watch task

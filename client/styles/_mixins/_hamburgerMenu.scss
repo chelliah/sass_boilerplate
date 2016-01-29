@@ -1,0 +1,82 @@
+@import "transform";
+@import "transition";
+@import "animation";
+@import "responsive";
+@import "transitionTransform";
+@import "../_utilities/variables";
+
+
+@mixin hamburger($firstColor, $secondColor){
+  .hamburger-menu {
+    display: none;
+    float: right;
+    padding-right: 10px;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    margin: 30px auto;
+    z-index: 3;
+
+    cursor: pointer;
+
+    @include tablet {
+
+      display: inline-block;
+
+    }
+    @include mobile {
+
+      display: inline-block;
+    }
+
+    .hamburger-elem {
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 4px;
+      width: 50px;
+      background-color: $firstColor;
+      border-radius: 1px;
+      opacity: 1;
+
+      &.menu1{
+        @include transitionTransform(.5s, background-color, .5s);
+
+        &.open{
+          @include transform(rotate(42.5deg));
+          transform-origin: bottom left;
+          background-color: $primaryColor;
+        }
+
+        &.closed{
+          @include transform(rotate(0deg));
+          transform-origin: bottom left;
+        }
+
+      }
+
+      &.menu2{
+        top: 17px;
+        @include transition(opacity, .5s, ease-out, 0s);
+        &.open{
+          opacity: 0;
+        }
+      }
+
+      &.menu3{
+        @include transitionTransform(.5s, background-color, .5s);
+        transform-origin: top left;
+        top: 34px;
+        &.open{
+          @include transform(rotate(-42.5deg));
+          transform-origin: top left;
+          background-color: $primaryColor;
+        }
+      }
+
+    }
+
+  }
+}
+
