@@ -17,6 +17,11 @@
     //height:         calc(100% - 110px);
     z-index: 5;
 
+    #defaultCanvas{
+      height: 100% !important;
+      //overflow: hidden;
+    }
+
 
 
   }
@@ -32,7 +37,11 @@
       font-weight: 100;
       font-size: 24px;
       //margin-left: 20px;
-      margin: 400px 20px;
+
+      margin: 500px 20px 300px 20px;
+      &:nth-child(1){
+        margin: 200px 20px 200px 20px;
+      }
 
       .bio-cluster{
         margin: 200px 20px;

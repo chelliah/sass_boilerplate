@@ -1181,6 +1181,8 @@
   .about-me-container #animation-container {
     width: 100%;
     z-index: 5; }
+    .about-me-container #animation-container #defaultCanvas {
+      height: 100% !important; }
   .about-me-container .bio-container {
     position: relative;
     height: 100%;
@@ -1190,7 +1192,9 @@
     .about-me-container .bio-container .bio-event {
       font-weight: 100;
       font-size: 24px;
-      margin: 400px 20px; }
+      margin: 500px 20px 300px 20px; }
+      .about-me-container .bio-container .bio-event:nth-child(1) {
+        margin: 200px 20px 200px 20px; }
       .about-me-container .bio-container .bio-event .bio-cluster {
         margin: 200px 20px; }
   .about-me-container .scroll-button {

@@ -1,4 +1,8 @@
 
+  //
+  //$(document).ready(function(){
+  //    setup();
+  //});
 
     var cubes;
     var staticCubes;
@@ -9,8 +13,8 @@
     var modifiedHeight;
 
     function setup(){
-        modifiedHeight = displayHeight-110;
-        canvas = createCanvas(displayWidth, displayHeight-110);
+        modifiedHeight = displayHeight;
+        canvas = createCanvas(windowWidth, windowHeight);
 
         //canvas = createCanvas(window.innerWidth, window.innerHeight);
         canvas.position(0,0);
@@ -36,7 +40,7 @@
 
 
     function windowResized() {
-        resizeCanvas(displayWidth, displayHeight-110);
+        resizeCanvas(windowWidth, windowHeight);
         initialize(Math.round(windowWidth *.8),100,25);
 
     }
