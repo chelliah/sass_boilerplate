@@ -45,6 +45,9 @@
 .scroll-button{
   position: absolute;
   bottom: 15px;
+  @include mobile{
+    bottom: 55px;
+  }
   left: 0;
   right: 0;
   @include infiniteAnimation(0, 1s,  cubic-bezier(.17,.67,.41,1) , bounceScroll);

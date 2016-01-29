@@ -1221,6 +1221,9 @@
   /* this prevents the animation from restarting! */
   animation-iteration-count: infinite;
   text-align: center; }
+  @media (max-width: 767px) {
+    .scroll-button {
+      bottom: 55px; } }
   .scroll-button .scroll-svg {
     width: 100px; }
 
@@ -1288,6 +1291,7 @@ html, body {
   position: absolute;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 100vh;
   width: 100vw; }
 
