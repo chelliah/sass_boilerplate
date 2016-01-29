@@ -8,7 +8,7 @@
   height:    -moz-calc(100% - 110px);
   height:         calc(100% - 110px);
   //top: 110px;
-  //overflow-y: scroll;
+  overflow-y: hidden;
 
   #animation-container{
     width: 100%;
@@ -38,11 +38,15 @@
       font-size: 24px;
       //margin-left: 20px;
 
-      margin: 500px 20px 300px 20px;
-      &:nth-child(1){
-        margin: 200px 20px 200px 20px;
+      margin: 400px 20px;
+      &:first-child{
+        margin: 20% 20px;
       }
 
+      &:last-child{
+        margin: 0 20px;
+        padding: 20% 0;
+      }
       .bio-cluster{
         margin: 200px 20px;
       }
