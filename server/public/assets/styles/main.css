@@ -299,19 +299,19 @@
     padding-right: 10px;
     padding-left: 10px;
     background-color: #423434;
-    -webkit-transition: height 1s, color 1s;
-    -moz-transition: height 1s, color 1s;
-    -o-transition: height 1s, color 1s;
-    transition: height 1s, color 1s; }
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s; }
     .index-header .main-banner .banner-link-container .banner-link .slide-up-link {
       font-size: 18px;
       padding-top: 25px;
       text-decoration: none;
       color: #423434;
-      -webkit-transition: color 1s;
-      -moz-transition: color 1s;
-      -o-transition: color 1s;
-      transition: color 1s; }
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
     .index-header .main-banner .banner-link-container .banner-link:hover {
       height: 60px; }
       .index-header .main-banner .banner-link-container .banner-link:hover .slide-up-link {
@@ -435,19 +435,19 @@
     padding-right: 10px;
     padding-left: 10px;
     background-color: #423434;
-    -webkit-transition: height 1s, color 1s;
-    -moz-transition: height 1s, color 1s;
-    -o-transition: height 1s, color 1s;
-    transition: height 1s, color 1s; }
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s; }
     .project-header .main-banner .banner-link-container .banner-link .slide-up-link {
       font-size: 18px;
       padding-top: 25px;
       text-decoration: none;
       color: #423434;
-      -webkit-transition: color 1s;
-      -moz-transition: color 1s;
-      -o-transition: color 1s;
-      transition: color 1s; }
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
     .project-header .main-banner .banner-link-container .banner-link:hover {
       height: 60px; }
       .project-header .main-banner .banner-link-container .banner-link:hover .slide-up-link {
@@ -570,19 +570,19 @@
       padding-right: 10px;
       padding-left: 10px;
       background-color: #423434;
-      -webkit-transition: height 1s, color 1s;
-      -moz-transition: height 1s, color 1s;
-      -o-transition: height 1s, color 1s;
-      transition: height 1s, color 1s; }
+      -webkit-transition: height 0.5s;
+      -moz-transition: height 0.5s;
+      -o-transition: height 0.5s;
+      transition: height 0.5s; }
       .fuschia-header .main-banner .banner-link-container .banner-link .slide-up-link {
         font-size: 18px;
         padding-top: 25px;
         text-decoration: none;
         color: #423434;
-        -webkit-transition: color 1s;
-        -moz-transition: color 1s;
-        -o-transition: color 1s;
-        transition: color 1s; }
+        -webkit-transition: color 0.5s;
+        -moz-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s; }
       .fuschia-header .main-banner .banner-link-container .banner-link:hover {
         height: 60px; }
         .fuschia-header .main-banner .banner-link-container .banner-link:hover .slide-up-link {
@@ -709,19 +709,19 @@
       padding-right: 10px;
       padding-left: 10px;
       background-color: #ecf0f1;
-      -webkit-transition: height 1s, color 1s;
-      -moz-transition: height 1s, color 1s;
-      -o-transition: height 1s, color 1s;
-      transition: height 1s, color 1s; }
+      -webkit-transition: height 0.5s;
+      -moz-transition: height 0.5s;
+      -o-transition: height 0.5s;
+      transition: height 0.5s; }
       .open-arms-header .main-banner .banner-link-container .banner-link .slide-up-link {
         font-size: 18px;
         padding-top: 25px;
         text-decoration: none;
         color: #ecf0f1;
-        -webkit-transition: color 1s;
-        -moz-transition: color 1s;
-        -o-transition: color 1s;
-        transition: color 1s; }
+        -webkit-transition: color 0.5s;
+        -moz-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s; }
       .open-arms-header .main-banner .banner-link-container .banner-link:hover {
         height: 60px; }
         .open-arms-header .main-banner .banner-link-container .banner-link:hover .slide-up-link {

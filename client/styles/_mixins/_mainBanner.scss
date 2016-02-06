@@ -6,86 +6,6 @@
 @import 'responsive';
 @import './hamburgerMenu';
 
-
-//.main-banner{
-//  //height: 150px;
-//  @extend %clearFix;
-//
-//  *{
-//    display: inline-block;
-//    //@extend %clearFix;
-//
-//  }
-//
-//  .banner-svg-container{
-//    float: left;
-//    position: relative;
-//    height: 110px;
-//  }
-//  .banner-svg{
-//    padding-top: 10px;
-//    padding-left: 10px;
-//    //float: left;
-//    position: absolute;
-//    z-index: 3;
-//    width: 100px;
-//    //fill: purple;
-//
-//
-//    @include desktop{
-//      fill: $fontColor !important;
-//
-//    }
-//    @include transition(fill .5s ease-in);
-//
-//    *{
-//      @include transition(stroke .5s ease-in);
-//      @include desktop{
-//        stroke: $fontColor !important;
-//      }
-//    }
-//    &.open{
-//      fill: $primaryColor;
-//      * {
-//        stroke: $primaryColor;
-//      }
-//    }
-//  }
-//
-//  .banner-link-container{
-//    float: right;
-//
-//    @include tablet{
-//      display: none;
-//    }
-//    @include mobile{
-//      display: none;
-//    }
-//    .banner-link{
-//      height: 0px;
-//      margin: 0;
-//      padding-right: 10px;
-//      padding-left: 10px;
-//      background-color: $fontColor;
-//      @include transition(height 1s, color 1s);
-//      .slide-up-link{
-//        font-size: 18px;
-//        padding-top: 25px;
-//        text-decoration: none;
-//        color: $fontColor;
-//        @include transition(color 1s);
-//      }
-//      &:hover{
-//        height: 60px;
-//        .slide-up-link{
-//          color: $primaryColor;
-//        }
-//      }
-//    }
-//  }
-//}
-
-
 @mixin banner($firstColor, $secondColor){
   .main-banner{
 
@@ -153,13 +73,13 @@
         padding-right: 10px;
         padding-left: 10px;
         background-color: $firstColor;
-        @include transition(height 1s, color 1s);
+        @include transition(height .5s);
         .slide-up-link{
           font-size: 18px;
           padding-top: 25px;
           text-decoration: none;
           color: $firstColor;
-          @include transition(color 1s);
+          @include transition(color .5s);
         }
         &:hover{
           height: 60px;
