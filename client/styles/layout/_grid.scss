@@ -1,0 +1,68 @@
+
+
+.row{
+  position: relative;
+  width: 100%;
+  display: block;
+  // padding-right: 10px;
+}
+
+%col {
+  position: relative;
+  min-height: 1px;
+  padding-right: $grid-padding;
+  padding-left: $grid-padding;
+  float: left;
+  box-sizing: border-box;
+  .grid-pad {
+  padding: 20px 0 20px 20px;
+  }
+}
+
+// @include mobile {
+@for $i from 1 to $columns + 1{
+  .col-s-#{$i} {
+    $percentage: percentage($i / $columns);
+    @extend %col;
+    width: $percentage;
+    &.margin{
+      @include calc(width, $percentage, (2 * $grid-margin));
+      margin: $grid-margin;
+      // width: (percentage($i/12) - 2);
+      // margin: 1%;
+    }
+  }
+}
+// }
+
+@include tablet {
+  @for $i from 1 to $columns + 1{
+    .col-m-#{$i} {
+      $percentage: percentage($i / $columns);
+      @extend %col;
+      width: $percentage;
+      &.margin{
+        @include calc(width, $percentage, (2 * $grid-margin));
+        margin: $grid-margin;
+        // width: (percentage($i/12) - 2);
+        // margin: 1%;
+      }
+    }
+  }
+}
+
+@include desktop {
+  @for $i from 1 to $columns + 1 {
+    .col-l-#{$i} {
+      $percentage: percentage($i / $columns);
+      @extend %col;
+      width: $percentage;
+      &.margin{
+        @include calc(width, $percentage, (2 * $grid-margin));
+        margin: $grid-margin;
+        // width: (percentage($i/12) - 2);
+        // margin: 1%;
+      }
+    }
+  }
+}

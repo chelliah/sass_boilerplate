@@ -14,16 +14,12 @@ gulp.task('styles', function(){
 
 //copy files
 gulp.task('copy', function(){
-    gulp.src(['node_modules/three/three.min.js'])
-        .pipe(gulp.dest('server/public/vendors/'));
     gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map'])
         .pipe(gulp.dest('server/public/vendors/'));
     gulp.src(['node_modules/font-awesome/fonts/*'])
         .pipe(gulp.dest('server/public/vendors/font-awesome/fonts'));
     gulp.src(['node_modules/font-awesome/css/*'])
         .pipe(gulp.dest('server/public/vendors/font-awesome/css'));
-    gulp.src(['node_modules/jquery-touchswipe/jquery.touchSwipe.min.js'])
-        .pipe(gulp.dest('server/public/vendors/'));
     gulp.src(['node_modules/normalize.css/normalize.css'])
         .pipe(gulp.dest('server/public/vendors/'));
     gulp.src(['client/views/*'])
@@ -32,11 +28,6 @@ gulp.task('copy', function(){
 
 //uglify and concat js
 gulp.task('js', function(){
-    //intro animation
-    gulp.src('client/scripts/welcome.js')
-        .pipe(uglify())
-        .pipe(concat('welcome.min.js'))
-        .pipe(gulp.dest('server/public/assets/scripts/'));
 
     //main page
     gulp.src('client/scripts/app.js')
@@ -44,17 +35,13 @@ gulp.task('js', function(){
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('server/public/assets/scripts/'));
 
-    //blocks animation
-    gulp.src('client/scripts/blocks.js')
-        .pipe(uglify())
-        .pipe(concat('blocks.min.js'))
-        .pipe(gulp.dest('server/public/assets/scripts/'));
 });
 
 //watch task
 gulp.task('watch', function(){
     gulp.watch('client/styles/**/*.scss', ['styles']);
     gulp.watch('client/scripts/*.js', ['js'])
+    gulp.watch('client/views/*.html', ['copy'])
 });
 
 gulp.task('default', ['styles', 'js', 'copy']);

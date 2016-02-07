@@ -1,0 +1,73 @@
+// ---------------------------------------------------------------------
+//  SCSS Settings
+// ---------------------------------------------------------------------
+
+
+// ----------------------------------------
+// Fonts
+// ----------------------------------------
+
+// Font weights: 400 | 900
+$serif: 'Garamond', serif;
+
+// Font weights: 400 | 700
+$sans-serif: 'Helvetica Neue', sans-serif;
+
+
+// ----------------------------------------
+// Font Size/ Line Height
+// ----------------------------------------
+$main-font: $sans-serif;
+$base-font-size: 1.5rem;
+$base-line-height: 1.6;
+
+
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+$off-white: #ecf0f1;
+$dark-brown: #423434;
+
+
+
+// ----------------------------------------
+// Responsive setup
+// ----------------------------------------
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// ----------------------------------------
+// Grid Variables
+// ----------------------------------------
+$columns: 12;
+$grid-padding: 10px;
+$grid-margin: 5px;
+
+
+// ----------------------------------------
+// Global Variables
+// ----------------------------------------
+
+$padding: 48px;
+$transition-speed: 0.5s;
+$transition: $transition-speed ease-in-out;
+// $wrapper-width: 1200px;
+// $header-breakpoint: $tablet-width;
