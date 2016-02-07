@@ -8,14 +8,3 @@
 
 @import 'pages/module';
 @import 'themes/module';
-
-// div{
-//   @include span(4 of $columns);
-//   // width: span(4 of 12);
-//   // margin-right: gutter();
-//   &:nth-child(3n + 3){
-//     margin-right: 0;
-//   }
-//
-//   // margin-left: gutter();
-// }
