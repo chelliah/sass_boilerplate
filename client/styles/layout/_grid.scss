@@ -1,9 +1,7 @@
-
-
 .row{
   position: relative;
   width: 100%;
-  display: inline-block;
+  display: flex;
   &:before, &:before{
     display: table;
   content: " ";
@@ -14,8 +12,7 @@
 %col {
   position: relative;
   min-height: 1px;
-  padding-right: $grid-padding;
-  padding-left: $grid-padding;
+  padding: $grid-padding;
   float: left;
   box-sizing: border-box;
 
@@ -28,6 +25,13 @@
     @extend %clearfix;
     @extend %col;
     width: $percentage;
+    &.gutter{
+      @include calc(width, $percentage, (2 * $grid-margin));
+      margin-left: $grid-margin;
+      margin-right: $grid-margin;
+      // width: (percentage($i/12) - 2);
+      // margin: 1%;
+    }
     &.margin{
       @include calc(width, $percentage, (2 * $grid-margin));
       margin: $grid-margin;
@@ -45,6 +49,13 @@
       @extend %clearfix;
       @extend %col;
       width: $percentage;
+      &.gutter{
+        @include calc(width, $percentage, (2 * $grid-margin));
+        margin-left: $grid-margin;
+        margin-right: $grid-margin;
+        // width: (percentage($i/12) - 2);
+        // margin: 1%;
+      }
       &.margin{
         @include calc(width, $percentage, (2 * $grid-margin));
         margin: $grid-margin;
@@ -62,6 +73,13 @@
       @extend %clearfix;
       @extend %col;
       width: $percentage;
+      &.gutter{
+        @include calc(width, $percentage, (2 * $grid-margin));
+        margin-left: $grid-margin;
+        margin-right: $grid-margin;
+        // width: (percentage($i/12) - 2);
+        // margin: 1%;
+      }
       &.margin{
         @include calc(width, $percentage, (2 * $grid-margin));
         margin: $grid-margin;
